@@ -8,11 +8,11 @@ class DrawerImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 150,
       width: 100,
       padding: const EdgeInsets.all(defaultPadding / 6),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(100),
           gradient: LinearGradient(
             colors: [
               Colors.pink,
@@ -24,13 +24,14 @@ class DrawerImage extends StatelessWidget {
             BoxShadow(color: Colors.blue, blurRadius: 10, offset: Offset(0, -2)),
           ]),
       child: ClipRRect(
-          borderRadius: BorderRadius.circular(50),
-          child: Transform.rotate(
-              angle: 0.1,
-              child: Image.asset(
-                'assets/images/profile.jpeg',
-                fit: BoxFit.cover,
-              ))),
+          borderRadius: BorderRadius.circular(100),
+          child: Transform.translate(
+            offset: const Offset(0, 0),
+            child: Image.asset(
+              'assets/images/profile.jpeg',
+              fit: BoxFit.cover,
+            ),
+          )),
     );
   }
 }
