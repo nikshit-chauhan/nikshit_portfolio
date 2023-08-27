@@ -29,6 +29,11 @@ class About extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
             ),
+            const Text(
+              'Co-Founder at Tripixel Labs',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
+            ),
             const Spacer(
               flex: 2,
             ),

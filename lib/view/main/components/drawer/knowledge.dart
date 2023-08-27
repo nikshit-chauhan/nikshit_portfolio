@@ -18,7 +18,6 @@ class KnowledgeText extends StatelessWidget {
           Expanded(
             child: Text(
               knowledge,
-              softWrap: true,
             ),
           ),
         ],
