@@ -16,6 +16,7 @@ class SocialMediaIcon extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: defaultPadding * 0.4),
         child: SvgPicture.asset(
           icon,
+          // ignore: deprecated_member_use
           color: Colors.white,
           height: 15,
           width: 15,

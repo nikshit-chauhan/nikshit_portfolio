@@ -20,7 +20,16 @@ class AboutUs extends StatelessWidget {
           const SizedBox(
             height: defaultPadding,
           ),
-          Text(aboutUs, style: Theme.of(context).textTheme.bodyMedium),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding * 4),
+            child: Text(
+              aboutUs,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    fontSize: 25,
+                    letterSpacing: 1.5,
+                  ),
+            ),
+          ),
         ],
       ),
     );
