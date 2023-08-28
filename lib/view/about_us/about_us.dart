@@ -9,28 +9,30 @@ class AboutUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          if (Responsive.isLargeMobile(context))
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            if (Responsive.isLargeMobile(context))
+              const SizedBox(
+                height: defaultPadding,
+              ),
+            const TitleText(prefix: "About", title: 'Me'),
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: "About", title: 'Me'),
-          const SizedBox(
-            height: defaultPadding,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding * 4),
-            child: Text(
-              aboutUs,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontSize: 25,
-                    letterSpacing: 1.5,
-                  ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding * 4),
+              child: Text(
+                aboutUs,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      letterSpacing: 1.5,
+                    ),
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

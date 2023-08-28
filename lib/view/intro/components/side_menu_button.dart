@@ -9,9 +9,9 @@ class MenuButton extends StatelessWidget {
     return Column(
       children: [
         // const Spacer(),
-        const SizedBox(
-          height: defaultPadding,
-        ),
+        // const SizedBox(
+        //   height: defaultPadding,
+        // ),
         TweenAnimationBuilder(
           tween: Tween(begin: 0.0, end: 1.0),
           duration: const Duration(milliseconds: 200),

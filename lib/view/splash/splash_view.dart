@@ -6,23 +6,13 @@ import 'package:flutter_portfolio/view/intro/components/animated_texts_componene
 import 'package:flutter_portfolio/view/splash/componenets/animated_loading_text.dart';
 import 'package:get/route_manager.dart';
 
-class SplashView extends StatefulWidget {
+class SplashView extends StatelessWidget {
   const SplashView({super.key});
   @override
-  State<SplashView> createState() => _SplashViewState();
-}
-
-class _SplashViewState extends State<SplashView> {
-  @override
-  void initState() {
-    super.initState();
+  Widget build(BuildContext context) {
     Timer(const Duration(seconds: 3), () {
       Get.offAll(() => const HomePage());
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: bgColor,
       body: Center(
