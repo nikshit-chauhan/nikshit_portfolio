@@ -16,7 +16,7 @@ class AboutUs extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: "About", title: 'Us'),
+          const TitleText(prefix: "About", title: 'Me'),
           const SizedBox(
             height: defaultPadding,
           ),
