@@ -33,26 +33,21 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = '{{flutter_service_worker_version}}';
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('flutter_service_worker.js?v=' + serviceWorkerVersion);
+  }
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
+  <script type="application/javascript">
+    window.addEventListener('load', function() {
+    // Flutter initialization code
+    window.flutterWebRenderer = 'canvaskit';
+    window.flutterLoader.load();
+  });
   </script>
 </body>
 </html>
